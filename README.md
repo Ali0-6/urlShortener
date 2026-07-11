@@ -1,0 +1,26 @@
+# URL Shortener
+
+A backend service that shortens long URLs, built with Java and Spring Boot.
+
+## Status
+🚧 Work in progress — currently learning Java/Spring Boot by building this from scratch.
+
+## Tech Stack
+- Java 17
+- Spring Boot
+- Maven
+
+## Running the project
+1. Clone the repo
+2. Run `./mvnw spring-boot:run` (or run `UrlShortenerApplication.java` directly from an IDE)
+3. App starts on `http://localhost:8080`
+
+## Roadmap
+- [x] Project setup with Spring Boot
+- [ ] Create short URL endpoint
+- [ ] Redirect endpoint
+- [ ] Database integration (PostgreSQL)
+- [ ] Click analytics
+- [ ] Caching (Redis)
+- [ ] Rate limiting
+- [ ] Docker + CI/CD
