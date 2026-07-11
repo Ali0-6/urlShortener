@@ -12,8 +12,10 @@ A backend service that shortens long URLs, built with Java and Spring Boot.
 
 ## Running the project
 1. Clone the repo
-2. Run `./mvnw spring-boot:run` (or run `UrlShortenerApplication.java` directly from an IDE)
-3. App starts on `http://localhost:8080`
+2. Create a PostgreSQL database named `urlshortener`
+3. Set environment variables `DB_USERNAME` and `DB_PASSWORD` (matching your local Postgres credentials)
+4. Run `./mvnw spring-boot:run` (or run `UrlShortenerApplication.java` directly from an IDE)
+5. App starts on `http://localhost:8080`
 
 ## Roadmap
 - [x] Project setup with Spring Boot

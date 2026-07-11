@@ -16,4 +16,9 @@ public class HelloController {
         return "your pizza is $25 yh ik thats a lot";
     }
 
+    @GetMapping("/carMileage")
+    public String CarInfo() {
+        return "Your car has 107,657 miles";
+    }
+
 }
