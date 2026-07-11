@@ -13,7 +13,7 @@ public class HelloController {
 
     @GetMapping("/pizza")
     public String pizzaPrice() {
-        return "your pizza is $25";
+        return "your pizza is $25 yh ik thats a lot";
     }
 
 }
