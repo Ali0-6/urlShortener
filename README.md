@@ -19,9 +19,9 @@ A backend service that shortens long URLs, built with Java and Spring Boot.
 
 ## Roadmap
 - [x] Project setup with Spring Boot
-- [ ] Create short URL endpoint
+- [x] Create short URL endpoint
 - [ ] Redirect endpoint
-- [ ] Database integration (PostgreSQL)
+- [x] Database integration (PostgreSQL)
 - [ ] Click analytics
 - [ ] Caching (Redis)
 - [ ] Rate limiting

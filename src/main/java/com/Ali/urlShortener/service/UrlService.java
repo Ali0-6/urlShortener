@@ -44,4 +44,12 @@ public class UrlService {
         return sb.toString();
     }
 
+    public Url getAndTrackClick(String shortCode) {
+        Url url = urlRepository.findByShortCode(shortCode)
+                .orElseThrow(() -> new RuntimeException("Short URL not found"));
+
+        url.setClickCount(url.getClickCount() + 1);
+        return urlRepository.save(url);
+    }
+
 }
