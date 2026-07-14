@@ -4,7 +4,7 @@ import com.Ali.urlShortener.model.Url;
 import com.Ali.urlShortener.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.Ali.urlShortener.exception.UrlNotFoundException;
 import java.security.SecureRandom;
 
 @Service
@@ -46,7 +46,7 @@ public class UrlService {
 
     public Url getAndTrackClick(String shortCode) {
         Url url = urlRepository.findByShortCode(shortCode)
-                .orElseThrow(() -> new RuntimeException("Short URL not found"));
+                .orElseThrow(() -> new UrlNotFoundException(shortCode));
 
         url.setClickCount(url.getClickCount() + 1);
         return urlRepository.save(url);

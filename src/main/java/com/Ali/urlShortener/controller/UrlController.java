@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import jakarta.validation.Valid;
 
 
 @RestController
@@ -59,7 +60,7 @@ public class UrlController {
     }
 
     @PostMapping
-    public UrlResponse createShortUrl(@RequestBody CreateUrlRequest request) {
+    public UrlResponse createShortUrl(@Valid @RequestBody CreateUrlRequest request) {
         Url savedUrl = urlService.createShortUrl(request.getOriginalUrl());
 
         String fullShortUrl = "http://localhost:8080/" + savedUrl.getShortCode();
