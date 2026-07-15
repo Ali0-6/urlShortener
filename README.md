@@ -22,7 +22,9 @@ A backend service that shortens long URLs, built with Java and Spring Boot.
 - [x] Create short URL endpoint
 - [x] Redirect endpoint
 - [x] Database integration (PostgreSQL)
-- [ ] Click analytics
+- [x] Click analytics
+- [x] Input validation and error handling
 - [ ] Caching (Redis)
 - [ ] Rate limiting
+- [ ] Tests
 - [ ] Docker + CI/CD
