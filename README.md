@@ -17,6 +17,9 @@ A backend service that shortens long URLs, built with Java and Spring Boot.
 4. Run `./mvnw spring-boot:run` (or run `UrlShortenerApplication.java` directly from an IDE)
 5. App starts on `http://localhost:8080`
 
+## Running tests
+Run `UrlServiceTest` and `UrlControllerIntegrationTest` from your IDE, or `./mvnw test`
+
 ## Roadmap
 - [x] Project setup with Spring Boot
 - [x] Create short URL endpoint
@@ -26,5 +29,5 @@ A backend service that shortens long URLs, built with Java and Spring Boot.
 - [x] Input validation and error handling
 - [ ] Caching (Redis)
 - [ ] Rate limiting
-- [ ] Tests
+- [x] Tests
 - [ ] Docker + CI/CD
