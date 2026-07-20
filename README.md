@@ -1,11 +1,11 @@
-# URL Shortener
-
 [![CI](https://github.com/Ali0-6/urlShortener/actions/workflows/ci.yml/badge.svg)](https://github.com/Ali0-6/urlShortener/actions/workflows/ci.yml)
+
+# URL Shortener
 
 A backend service that shortens URLs, redirects users to the original link, and tracks click analytics — built with Java and Spring Boot.
 
 ## Status
-🚧 Work in progress — currently learning Java/Spring Boot by building this from scratch.
+✅ Core features complete
 
 ## Tech Stack
 - Java 26
@@ -29,9 +29,10 @@ A backend service that shortens URLs, redirects users to the original link, and 
 Requests flow through a layered structure: Controllers handle HTTP only, Services contain business logic, Repositories (Spring Data JPA) handle persistence. DTOs decouple the API's public shape from the database entity, preventing mass assignment vulnerabilities.
 
 ## API Endpoints
-
-POST /api/urls Create a short URL
-GET /{shortCode} Redirect to the original URL
+```text
+POST   /api/urls              Create a short URL
+GET    /{shortCode}            Redirect to the original URL
+```
 
 **Example request:**
 ```json
@@ -55,28 +56,28 @@ POST /api/urls
 ### Option 1: Docker (recommended)
 1. Clone the repo
 2. Create a `.env` file in the project root:
-
-DB_PASSWORD=your_chosen_password
-
+```bash
+   DB_PASSWORD=your_chosen_password
+```
 3. Run:
-
-docker compose up
-
+```bash
+   docker compose up
+```
 4. App runs at `http://localhost:8080`
 
 ### Option 2: Manual local setup
 1. Create PostgreSQL databases named `urlshortener` and `urlshortener_test`
 2. Set environment variables `DB_USERNAME` and `DB_PASSWORD`
 3. Run:
-
-./mvnw spring-boot:run
-
+```bash
+   ./mvnw spring-boot:run
+```
 4. App runs at `http://localhost:8080`
 
 ## Running Tests
-
+```bash
 ./mvnw test
-
+```
 Includes unit tests (Mockito-mocked service logic) and integration tests (full Spring context with a real test database, using `@ActiveProfiles("test")`).
 
 ## CI/CD
