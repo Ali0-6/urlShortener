@@ -4,9 +4,6 @@
 
 A backend service that shortens URLs, redirects users to the original link, and tracks click analytics — built with Java and Spring Boot.
 
-## Status
-🚧 Work in progress — currently learning Java/Spring Boot by building this from scratch.
-
 ## Tech Stack
 - Java 26
 - Spring Boot 4
